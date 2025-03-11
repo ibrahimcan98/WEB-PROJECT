@@ -1,31 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About</title>
-    <!-- Font awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!-- google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <!--Css -->
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/navbar.css" />
-    <link rel="stylesheet" href="./css/footer.css" />
-  </head>
 
- 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <!--Css -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/navbar.css" />
+  <link rel="stylesheet" href="./css/footer.css" />
+  <link rel="stylesheet" href="./css/about.css">
+</head>
 
-  
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <nav id="navbar">
+      <a href="index.html" class="nav-branding" target="_blank"><img src="./media/logo.webp" alt="" /></a>
+
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="booking.html" class="nav-link">Book</a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="service.html" class="nav-link">Service</a>
+        </li>
+        <li class="nav-item">
+          <a href="gallery.html" class="nav-link">Gallery</a>
+        </li>
+      </ul>
+
+      <div class="account">
+        <a href="login.html" class="nav-link user"><i class="fa-regular fa-user"></i></a>
+      </div>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+  <!-- MAIN SECTION -->
+  <section class="section1">
+    <h1>About Me</h1>
+<div class="aboutMe">
+      <img class="aboutImg" src="./media/IMG_1678-Edit.jpg" alt="">
+      <div class="paragraph">
+        <h1>My name is Ivana Tumbeva</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur. At varius tellus
+          non sed arcu nisl. Cras facilisis pharetra lorem enim
+          massa porttitor. Mus in pulvinar sit turpis aliquam
+          donec vitae. Malesuada a morbi eu consectetur vitae
+          imperdiet mi. Sed nullam nulla enim odio vestibulum odio
+          nunc pellentesque in. Erat aliquet metus vel vel in eu.
+        </p>
+        <h2>Education</h2>
+        <ul>
+          <li>Griffith Collage, Dublin</li>
+        </ul>
+        <h2>Awards</h2>
+        <ul>
+          <li>Lorem ipsum dolor sit amet consectetur. </li>
+          <li>Est aliquam mauris dictum accumsan. </li>
+          <li>Feugiat et mi purus ac.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div id="container">
+      <address class="contact">
+        <h3>Contact Me:</h3>
+        <p>+353 01 234 56 78</p>
+        <p>firs.last@domain.com</p>
+      </address>
+      <aside class="pages">
+        <ul class="footer-menu">
+          <li class="footer-item">
+            <a href="" class="footer-link">About Me</a>
+          </li>
+          <li class="footer-item">
+            <a href="" class="footer-link">Service</a>
+          </li>
+          <li class="footer-item">
+            <a href="" class="footer-link">Gallery</a>
+          </li>
+          <li class="footer-item">
+            <a href="" class="footer-link">Log in </a>
+          </li>
+        </ul>
+      </aside>
+      <section class="social-media">
+        <h3>Follow me:</h3>
+        <a href="https://www.instagram.com/ivanatumbeva_photo/" target="_blank"><i
+            class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/ivana.tumbeva" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+
+        <div>
+          <a class="button" href="booking.html">Book</a>
+        </div>
+      </section>
+    </div>
+    <section class="madeby">® Two Turk One Rus, 2025</section>
+  </footer>
+  <!-- Script -->
+  <script src="./javascript/script.js"></script>
+</body>
+
 </html>
