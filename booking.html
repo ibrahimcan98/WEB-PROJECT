@@ -22,43 +22,43 @@
 </head>
 
 <body>
+  <h1>Booking</h1>
   <!--Booking form-->
-  <form action="">
-    <h1>Booking</h1>
-    <!-- Prefered date -->
-    <label for="">Prefered date</label>
-    <input type="date" name="date_book" id="date_book" required>
-    <br>
+  <form action="" class="form">
 
-    <!-- Prefered time -->
-    <label for="">Prefered time</label>
-    <input type="time" name="date_book" id="date_book" required>
-    <br>
+    <div class="label-field-container">
+      <!-- Prefered date -->
+      <label for="date_book">Prefered date</label>
+      <input type="date" name="date_book" id="date_book" required>
 
-    <!-- Location-->
-    <label for="">Location</label>
-    <select name="location_book" id="location_book" required>
-      <option value=""></option>
-      <option value=""></option>
-    </select>
-    <br>
+      <!-- Prefered time -->
+      <label for="time_book">Prefered time</label>
+      <input type="time" name="time_book" id="time_book" required>
 
-    <!-- Type of photoshoot-->
-    <fieldset>
-      <legend>Type of a photoshoot</legend>
-      <input type="radio" name="portrait" id="portrait" value="portrait">
-      <label for="portrait">portrait</label>
-      <input type="radio" name="family" id="family" value="family">
-      <label for="family">family</label>
+      <!-- Location-->
+      <label for="location_book">Location</label>
+      <select name="location_book" id="location_book" required>
+        <option value="O'Connel St."></option>
+        <option value="Camden St."></option>
+      </select>
+
+      <!-- Type of photoshoot-->
+      <fieldset>
+        <legend>Type of a photoshoot</legend>
+        <div class="portrait-family">
+          <input type="radio" name="portrait" id="portrait" value="portrait">
+          <label for="portrait">portrait</label>
+          <input type="radio" name="family" id="family" value="family">
+          <label for="family">family</label>
+        </div>
     </fieldset>
-    <br>
 
     <!-- User's message to the photographer -->
     <label for="book_message">Your message</label>
     <textarea name="message" id="book_message"></textarea>
-    <br>
+    </div>
 
-    <section>
+    <section class="note">
       <p>Your preferred date and time may not fit into my timetable, so I will be in contact with you to confirm your booking date and time</p>
     </section>
 
