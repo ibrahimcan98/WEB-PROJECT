@@ -1,0 +1,52 @@
+/* FORM STYLING*/
+/* Form is placed in the center with flex display*/
+h1 {
+    display:flex;
+    font-size: 3rem;
+    align-content: center;
+    justify-content: center;
+}
+
+.form {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-basis: 400px;
+    align-items:center;
+    justify-content: center;
+}
+
+/* Input fields  */
+.form input {
+    border-radius: 2px;
+    border-style: hidden;
+    background-color: #d9d9d9;
+}
+
+/* Sign in and login button */
+.form input[type="submit"],
+button {
+    width: max-content;
+    padding: 1rem;
+    margin: 0.5em;
+    background-color: #3d4142;
+    color: #fffefa;
+    font-size: 16px;
+}
+
+.login_section, .signin_section {
+    display:flex;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-basis: 500px;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+    font-size: 2rem;
+}
+
+login_signin {
+    display: block;
+   
+}

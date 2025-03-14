@@ -21,6 +21,7 @@
     />
     <!--Css -->
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/signin_login_form.css" />
     <link rel="stylesheet" href="./css/navbar.css" />
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/tablet.css" />
@@ -70,56 +71,59 @@
       </nav>
     </header>
 
+    <h1>Sign in</h1>
     <!-- Sign In form -->
     <form action="#" class="form" name="sign_in_form">
-      <h1>Sign in</h1>
+      
       <!-- First name -->
-      <label for="first_name_sign">First name</label>
       <input
         type="text"
         name="first_name"
         id="first_name_sign"
         required
-        placeholder=""
+        placeholder="First name"
       />
       <br />
 
       <!-- Last name -->
-      <label for="last_name_sign">Last name</label>
       <input
         type="text"
         name="last_name"
         id="last_name_sign"
         required
-        placeholder=""
+        placeholder="Last name"
       />
       <br />
 
       <!-- Phone -->
-      <label for="phone_sign">Phone number</label>
-      <input type="tel" name="phone" id="phone_sign" required placeholder="" />
+
+      <input 
+        type="tel" 
+        name="phone" 
+        id="phone_sign" 
+        required 
+        placeholder="Mobile phone" 
+      />
       <br />
 
       <!-- E-mail -->
-      <label for="email_sign">E-mail</label>
       <input
         type="email"
         name="email"
         id="email_sign"
         required
-        placeholder=""
+        placeholder="E-mail"
         pattern=""
       />
       <br />
 
       <!-- Password -->
-      <label for="pass_sign">Password</label>
       <input
         type="password"
         name="pass"
         id="pass_sign"
         required
-        placeholder=""
+        placeholder="Password"
       />
       <br />
 
@@ -127,6 +131,12 @@
       <input type="submit" value="Sign in" />
       <br />
     </form>
+
+    <section class="login_section">
+      <p>Have an account?</p>
+      <a href="login.html"><button>Log in</button></a>
+    </section>
+
 
     <!-- FOOTER -->
     <footer>
