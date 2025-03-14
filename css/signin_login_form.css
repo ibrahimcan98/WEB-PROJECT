@@ -1,52 +1,84 @@
-/* FORM STYLING*/
-/* Form is placed in the center with flex display*/
-h1 {
+.forms_sections {
     display:flex;
-    font-size: 3rem;
-    align-content: center;
-    justify-content: center;
-}
-
-.form {
-    display: inline-flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    flex-basis: 400px;
-    align-items:center;
-    justify-content: center;
+}
+@media (min-width: 768px) {
+    .forms_sections {
+        display:flex;
+        flex-direction: column;
+    }
 }
 
-/* Input fields  */
-.form input {
-    border-radius: 2px;
-    border-style: hidden;
-    background-color: #d9d9d9;
+@media (min-width: 1200px) {
+    .forms_sections {
+        display:flex;
+        flex-direction: row;
+    }
 }
-
-/* Sign in and login button */
-.form input[type="submit"],
-button {
-    width: max-content;
-    padding: 1rem;
-    margin: 0.5em;
-    background-color: #3d4142;
-    color: #fffefa;
-    font-size: 16px;
-}
-
-.login_section, .signin_section {
-    display:flex;
+.form_container {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    flex-basis: 500px;
+    flex-basis: 500px;;
+    align-items: center;
+    padding: 3em;
+    justify-content: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+          rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.form_container h1 {
+      color: #e5989b;
+      text-align: center;
+      font-size: 2.6em;
+      text-shadow: 1px 1px black;
+      letter-spacing: 0.4em;
+      margin: 0.6em;
+}
+.form_container input {
+    width: 100%;
+    padding: 0.4em;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+.form_container button {
+    margin: 1em 0;
+    background-color: #e5989b;
+    padding: 1em 3em;
+    border: 1px solid transparent;
+    border-radius: 4em;
+    color: #f5efff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.form_container button:hover {
+    background-color: #f5efff;
+    color: #e5989b;
+    border: 1px solid #3b3030;
+}
+
+.signin_section, .login_section {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: aqua;
-    font-size: 2rem;
+    width:auto;
+    padding: 3em;
+    
+}
+.signin_section {
+    background-color: #e5989b;
+}
+.login_section {
+    background-color: #8ff8a8;
 }
 
-login_signin {
-    display: block;
-   
+ .form_container[id="sign_in_form"] h1, button:hover {
+    color: #8ff8a8;
+}
+.form_container[id="sign_in_form"] button {
+    background-color: #8ff8a8;
 }

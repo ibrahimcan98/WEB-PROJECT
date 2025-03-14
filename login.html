@@ -24,39 +24,30 @@
 
 <body>
   <!-- MAIN SECTION -->
-  
-  <section class="login_container">
-    <form action="" class="form" name="login_form">
-      <h1>Login</h1>
-      <!-- E-mail -->
-      <input 
-      type="email" 
-      name="email" 
-      id="email_sign" 
-      placeholder="E-mail">
-      <br>
+  <div class="forms_sections">
+      <form action="" class="form_container" name="login_form">
+        <h1>Login</h1>
+        <!-- E-mail -->
+        <input type="email" name="email" id="email_sign" placeholder="E-mail">
+        <br>
 
-      <!-- Password -->
-      <input 
-      type="password" 
-      name="pass" 
-      id="pass_sign" 
-      placeholder="Password">
-      <br>
+        <!-- Password -->
+        <input type="password" name="pass" id="pass_sign" placeholder="Password">
+        <br>
 
-      <!-- Sign in button -->
-      <input type="submit" value="Login">
-      <br>
-      <p>Forgot your password?<a href="#">Reset your password</a></p>
-    </form>
-  </section>
+        <!-- Log in button -->
+        <section class="button_area">
+          <button type="submit">Login</button>
+        </section>
+        <p>Forgot your password?<a href="#">Reset your password</a></p>
+      </form>
 
-  <section class="signin_section">
-    <p>Need an account?</p>
-    <a href="signin.html"><button>Sign in</button></a>
-  </section>
-  
- 
+    <section class="signin_section">
+      <p>Need an account?</p>
+      <a href="signin.html"><button type="button">Sign in</button></a>
+    </section>
+  </div>
+
 </body>
 
 </html>
