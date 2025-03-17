@@ -17,6 +17,7 @@
       rel="stylesheet"
     />
     <!--Css -->
+    <link rel="stylesheet" href="./css/account.css">
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/navbar.css" />
     <link rel="stylesheet" href="./css/footer.css" />
@@ -68,45 +69,186 @@
       </nav>
     </header>
     <!-- MAIN SECTION -->
+    <section class="container">
+      <div>
+        <h1>hi <span>@ user name< i'm a span></span></h1>
+        <ul class="pink">
+          <h2>upcoming booking</h2>
+          <fieldset class="box">
+            <legend>Confirmed</legend>
+            <ul class="ulList">
+              <ul class="ul1">
+                <li class="showDate">
+                  <label for="date">date:<span>
+                    </span>
+                  </label>
+                </li>
+                <li class="showDate">
+                  <label for="time">time:<span></span>
+                  </label>
+                </li>
+                <li class="showDate">
+                  <label for="location">location : <span></span>
+                  </label>
+                </li>
+              </ul>
+              <ul class="ul2 editCancel">
+                <ul class="editCancel">
+                  <li>
+                    <i class="fa-pen fa"></i>
+                    <input type="submit" value="Edit">
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-xmark"></i>
+                    <input type="submit" value="Cancel">
+                  </li>
+                </ul>
+              </ul>
+            </ul>
+          </fieldset>
+          <fieldset class="box">
+            <legend>Not confirmed</legend>
+            <ul class="ulList">
+              <ul class="ul1">
+                <li class="showDate">
+                  <label for="date">date:<span></span>
+                  </label>
+                </li>
+                <li class="showDate">
+                  <label for="time">time:<span></span>
+                  </label>
+                </li>
+                <li class="showDate">
+                  <label for="location">location : <span></span>
+                  </label>
+                </li>
+              </ul>
+              <ul class="ul2 editCancel">
+                <ul class="editCancel">
+                  <li>
+                    <i class="fa-pen fa"></i>
+                    <input type="submit" value="Edit">
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-xmark"></i>
+                    <input type="submit" value="Cancel">
+                  </li>
+                </ul>
+              </ul>
+            </ul>
+        </ul>
+        </fieldset>
+      </div>
+      <div class="aqua">
+        <ul>
+          <h2>past booking</h2>
+          <div class="box">
+            <ul class="ulList">
+              <ul class="ul1">
+                <li class="showDate">
+                  <label for="date">date:<span></span>
+                  </label>
+                </li>
+                <li class="showDate">
+                  <label for="time">time:<span></span>
+                  </label>
+                </li>
+                <li class="showDate">
+                  <label for="location">location : <span></span>
+                  </label>
+                </li>
+              </ul>
+              <ul class="ul2 editCancel">
+                <ul class="editCancel">
+                  <li>
+                    <i class="fa-camera-retro fa"></i>
+                    <input type="submit" value="Result">
+                  </li>
+                </ul>
+              </ul>
+            </ul>
+          </div>
+          <div class="box">
+            <ul class="ulList">
+              <ul class="ul1">
+                <li class="showDate">
+                  <label for="date">date:<span></span>
+                  </label>
+                </li>
+                <li class="showDate">
+                  <label for="time">time:<span></span>
+                  </label>
+                </li>
+                <li class="showDate">
+                  <label for="location">location : <span></span>
+                  </label>
+                </li>
+              </ul>
+              <ul class="ul2 editCancel">
+                <ul class="editCancel">
+                  <li>
+                    <i class="fa-camera-retro fa"></i>
+                    <input type="submit" value="Result">
+                  </li>
+                </ul>
+              </ul>
+            </ul>
+          </div>
+        </ul>
+      </div>
+    </section>
+  
+  
+    <section class="starRating">
+      <p>If enjoyed your photoshoot with me, please don’t hesitate to leave your review.</p>
+      <h3>Star Rating</h3>
+  
+      <section>
+        <button class="fa fa-star checked"></button>
+        <button class="fa fa-star checked"></button>
+        <button class="fa fa-star checked"></button>
+        <button class="fa fa-star star checked"></button>
+        <button class="fa fa-star star checked"></button>
+      </section>
+      <p>your message <i class="fa-regular fa-comment-dots"></i></p>
+      <textarea class="message"></textarea>
+      <input type="submit" value="send" class="send">
+    </section>
+  
+  
     <!-- FOOTER -->
     <footer>
-      <div id="container">
+      <div id="container"> <!-- div is for grid-->
         <address class="contact">
           <h3>Contact Me:</h3>
           <p>+353 01 234 56 78</p>
-          <p>firs.last@domain.com</p>
+          <p>first.last@domain.com</p>
         </address>
-        <aside class="pages">
-          <ul class="footer-menu">
+        <article class="pages">
+          <nav class="footer-menu">
             <li class="footer-item">
-              <a href="" class="footer-link">About Me</a>
+              <a href="about.html" class="footer-link">About Me</a>
             </li>
             <li class="footer-item">
-              <a href="" class="footer-link">Service</a>
+              <a href="service.html" class="footer-link">Service</a>
             </li>
             <li class="footer-item">
-              <a href="" class="footer-link">Gallery</a>
+              <a href="gallery.html" class="footer-link">Gallery</a>
             </li>
             <li class="footer-item">
-              <a href="" class="footer-link">Log in </a>
+              <a href="login.html" class="footer-link">Log in </a>
             </li>
-          </ul>
-        </aside>
-        <section class="social-media">
+          </nav>
+        </article>
+        <article class="footer-links">
           <h3>Follow me:</h3>
-          <a
-            href="https://www.instagram.com/ivanatumbeva_photo/"
-            target="_blank"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-          <a href="https://www.facebook.com/ivana.tumbeva" target="_blank"
-            ><i class="fa-brands fa-facebook"></i
-          ></a>
-
-          <div>
-            <a class="button" href="booking.html">Book</a>
-          </div>
-        </section>
+          <section class="social-media">
+            <a href="https://www.instagram.com/ivanatumbeva_photo/" target="_blank"><i
+                class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/ivana.tumbeva" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          </section>
+          <a class="button_dark" href="booking.html">Book</a>
+        </article>
       </div>
       <section class="madeby">® Two Turk One Rus, 2025</section>
     </footer>
