@@ -5,8 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Account</title>
-  <link rel="stylesheet" 
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <!-- Font awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -26,7 +25,7 @@
 
 
 <body>
-  
+
   <!-- NAVBAR -->
   <header>
     <nav id="navbar">
@@ -63,88 +62,151 @@
   <!-- MAIN SECTION -->
   <section class="container">
     <div>
+      <h1>hi <span>@ user name< i'm a span></span></h1>
       <ul class="pink">
         <h2>upcoming booking</h2>
         <fieldset class="box">
-          <legend>confirmed</legend>
+          <legend>Confirmed</legend>
           <ul class="ulList">
             <ul class="ul1">
-              <li>nice</li>
-              <li>nice</li>
-              <li>nice</li>
+              <li class="showDate">
+                <label for="date">date:<span>
+                  </span>
+                </label>
+              </li>
+              <li class="showDate">
+                <label for="time">time:<span></span>
+                </label>
+              </li>
+              <li class="showDate">
+                <label for="location">location : <span></span>
+                </label>
+              </li>
             </ul>
             <ul class="ul2 editCancel">
               <ul class="editCancel">
-              <li>
-                <i class="fa-pen fa"></i>
-                <input type="submit" value="edit" >
-              </li>
-              <li>
-                <i class="fa-solid fa-xmark"></i>
-                <input type="submit" value="cancel" >
-              </li>
+                <li>
+                  <i class="fa-pen fa"></i>
+                  <input type="submit" value="edit">
+                </li>
+                <li>
+                  <i class="fa-solid fa-xmark"></i>
+                  <input type="submit" value="cancel">
+                </li>
+              </ul>
             </ul>
-          </ul>
           </ul>
         </fieldset>
         <fieldset class="box">
           <legend>Not confirmed</legend>
           <ul class="ulList">
             <ul class="ul1">
-              <li>nice</li>
-              <li>nice</li>
-              <li>nice</li>
+              <li class="showDate">
+                <label for="date">date:<span></span>
+                </label>
+              </li>
+              <li class="showDate">
+                <label for="time">time:<span></span>
+                </label>
+              </li>
+              <li class="showDate">
+                <label for="location">location : <span></span>
+                </label>
+              </li>
             </ul>
-            <ul class="ul2">
-              <li>nice</li>
-              <li>nice</li>
-              <li>nice</li>
+            <ul class="ul2 editCancel">
+              <ul class="editCancel">
+                <li>
+                  <i class="fa-pen fa"></i>
+                  <input type="submit" value="edit">
+                </li>
+                <li>
+                  <i class="fa-solid fa-xmark"></i>
+                  <input type="submit" value="cancel">
+                </li>
+              </ul>
             </ul>
           </ul>
-        </fieldset>
+      </ul>
+      </fieldset>
     </div>
-    <div>
-      <ul class="aqua">
+    <div class="aqua">
+      <ul>
         <h2>past booking</h2>
         <div class="box">
           <ul class="ulList">
             <ul class="ul1">
-              <li>nice</li>
-              <li>nice</li>
-              <li>nice</li>
+              <li class="showDate">
+                <label for="date">date:<span></span>
+                </label>
+              </li>
+              <li class="showDate">
+                <label for="time">time:<span></span>
+                </label>
+              </li>
+              <li class="showDate">
+                <label for="location">location : <span></span>
+                </label>
+              </li>
             </ul>
-            <ul class="ul2">
-              
-              <li>result</li>
+            <ul class="ul2 editCancel">
+              <ul class="editCancel">
+                <li>
+                  <i class="fa-camera-retro fa"></i>
+                  <input type="submit" value="Result">
+                </li>
+              </ul>
             </ul>
           </ul>
         </div>
         <div class="box">
           <ul class="ulList">
             <ul class="ul1">
-              <li>nice</li>
-              <li>nice</li>
-              <li>nice</li>
+              <li class="showDate">
+                <label for="date">date:<span></span>
+                </label>
+              </li>
+              <li class="showDate">
+                <label for="time">time:<span></span>
+                </label>
+              </li>
+              <li class="showDate">
+                <label for="location">location : <span></span>
+                </label>
+              </li>
             </ul>
-            <ul class="ul2">
-              <li>nice</li>
-              <li>nice</li>
-              <li>nice</li>
+            <ul class="ul2 editCancel">
+              <ul class="editCancel">
+                <li>
+                  <i class="fa-camera-retro fa"></i>
+                  <input type="submit" value="Result">
+                </li>
+              </ul>
             </ul>
           </ul>
         </div>
       </ul>
     </div>
   </section>
-  <hr>
 
-  <p>If enjoyed your photoshoot with me, please don’t hesitate  to leave your review.</p>
-  <p>your message <i class="fa-regular fa-comment-dots"></i></p>
-  <input type="text" class="message">
-  <input type="submit" value="send" class="send">
 
- 
-  
+  <section class="starRating">
+    <p>If enjoyed your photoshoot with me, please don’t hesitate to leave your review.</p>
+    <h2>Star Rating</h2>
+
+    <section>
+      <button class="fa fa-star checked"></button>
+      <button class="fa fa-star checked"></button>
+      <button class="fa fa-star checked"></button>
+      <button class="fa fa-star star checked"></button>
+      <button class="fa fa-star star checked"></button>
+    </section>
+    <p>your message <i class="fa-regular fa-comment-dots"></i></p>
+    <textarea class="message"></textarea>
+    <input type="submit" value="send" class="send">
+  </section>
+
+
 
   <!-- FOOTER -->
   <footer>
