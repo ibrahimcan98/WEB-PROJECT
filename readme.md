@@ -1,3 +1,5 @@
+Website link: https://ne-el-al.github.io/SEWA/
+
 Ibrahim Can Onder (3106910)
 * NAVIGATION BAR WITH JS
 * SWIPER WITH JS
