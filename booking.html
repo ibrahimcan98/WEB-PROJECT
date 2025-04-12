@@ -72,17 +72,17 @@
   <!--BOOKING FORM-->
   <main class="booking_container">
     <aside class="form">
-      <form action="" class="booking_form">
+      <form action="booking.php" class="booking_form" method="POST">
         <h1>Booking</h1>
 
         <!-- Prefered date -->
         <label for="">Prefered date</label>
-        <input type="date" name="date_book" id="date_book" required />
+        <input type="date" id="date_book" name="date" required />
         <hr />
 
-        <!-- Prefered time -->
+        <!-- Prefered time -->  
         <label for="">Prefered time</label>
-        <input type="time" name="date_book" id="date_book" required />
+        <input type="time" id="time_book" name="time" required />
         <hr />
 
         <!-- Location-->
@@ -110,7 +110,7 @@
         <hr />
         <!-- User's message to the photographer -->
         <label for="book_message">Your message</label>
-        <textarea name="message" id="book_message"></textarea>
+        <textarea name="text" id="book_message"></textarea>
         <hr />
 
         <!-- Note before finish booking button -->
@@ -122,7 +122,7 @@
 
         <!-- Finish booking button-->
         <section class="button-area">
-          <button type="submit" class="button-area">Finish booking</button>
+          <button type="submit" class="button-area" name="submit">Finish booking</button>
         </section>
       </form>
     </aside>

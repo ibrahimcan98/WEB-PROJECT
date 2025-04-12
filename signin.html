@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="./css/footer.css" />
   <link rel="stylesheet" href="./css/tablet.css" />
   <link rel="stylesheet" href="./css/desktop.css" />
-</head>
+ </head>
 
 <body>
   <!-- NAVBAR -->
@@ -78,21 +78,21 @@
     </aside>
     <!-- Sign in form -->
     <section class="auth_container sigin_auth">
-      <form>
+      <form action="signin.php" method="POST">
         <h1>Sing In</h1>
         <!-- Input fields -->
         <ul>
           <li class="input-place">
-            <input type="text" placeholder="UserName" required minlength="2" maxlength="15"/>
+            <input type="text" placeholder="UserName" required minlength="2" maxlength="15" name="userName" required/>
             <i class="fa-solid fa-user"></i>
             </i>
           </li>
           <li class="input-place">
-            <input type="email" placeholder="Email" required />
+            <input type="email" placeholder="Email" name="email" required />
             <i class="fa-solid fa-envelope"></i>
           </li>
           <li class="input-place">
-            <input type="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required />
+            <input type="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="password" required />
             <i class="fa-solid fa-lock"></i>
             
           </li>
@@ -107,7 +107,7 @@
           </li>
         </ul>
         <!-- Sign in button -->
-        <button type="submit">Sign in</button>
+        <button type="submit" name="submit">Sign in</button>
       </form>
 
       <!-- Alternative sign in with social media accounts (Google, Facebook) -->
