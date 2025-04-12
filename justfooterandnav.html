@@ -63,6 +63,14 @@
   </nav>
 </header>
   <!-- MAIN SECTION -->
+   <div>
+    <?php include('booking.php'); ?>
+
+    <h1>Hoşgeldiniz, <?php echo htmlspecialchars($user['name']); ?>!</h1>
+    
+    <p>Email: <?php echo htmlspecialchars($user['email']); ?></p>
+   </div>
+ 
   <!-- FOOTER -->
   <footer>
     <div id="container"> <!-- div is for grid-->
