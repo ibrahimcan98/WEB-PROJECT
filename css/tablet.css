@@ -24,12 +24,16 @@
   }
 
   /* Footer */
-  aside .footer-menu {
-    display: flex; /* Displays footer menu items in a row */
+  .footer-menu {
+    display: flex; /* Turns the element into a flex container so its children can be laid out using flexbox. */
+    flex-direction: row; /* Aligns child elements in a horizontal row, from left to right. */
+
+    text-align: center; /* Horizontally centers the text inside the element. */
+    justify-content: center; /* Horizontally centers the child elements inside the flex container. */
   }
 
-  aside .footer-item {
-    margin: 1em 1.5em; /* Adds spacing between footer items */
+  .footer-item {
+    margin: 1em 1em; /* Adds spacing between footer items */
   }
 
   /* LOG IN / SIGN IN */

@@ -305,7 +305,7 @@ i.fa-star {
 
 .form input {
   width: 100%; /* Makes input fields take full width */
-  padding: 0.4em; /* Adds padding inside inputs */
+  padding: 0.8em; /* Adds padding inside inputs */
   margin-top: 5px; /* Adds space above the input field */
   border: none; /* Removes default border */
   outline: none; /* Removes default outline */

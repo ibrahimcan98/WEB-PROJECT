@@ -69,12 +69,12 @@
     width: 50%; /* Makes input fields take half of the width */
   }
   /* FOOTER */
-  aside .footer-menu {
-    display: flex; /* Ensures footer menu is displayed in a row */
-  }
+  .footer-menu {
+    display: flex; /* Turns the element into a flex container so its children can be laid out using flexbox. */
+    flex-direction: row; /* Aligns child elements in a horizontal row, from left to right. */
 
-  aside .footer-item {
-    margin: 1em 1.5em; /* Adds spacing between footer items */
+    text-align: center; /* Horizontally centers the text inside the element. */
+    justify-content: center; /* Horizontally centers the child elements inside the flex container. */
   }
 
   #navbar img {
