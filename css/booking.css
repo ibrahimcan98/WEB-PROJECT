@@ -7,8 +7,15 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; /* Adds shadow effect */
   margin: 2rem;
+  padding: 1rem;
 }
-
+input {
+  width: 100%;
+  margin: auto;
+}
+label {
+  margin: 0.5em 0;
+}
 hr {
   margin: 1em 0; /* Adds spacing above and below */
   color: #e5989b; /* Sets horizontal rule color */
@@ -23,6 +30,7 @@ hr {
   text-shadow: 2px 2px black; /* Adds black text shadow */
   letter-spacing: 0.4em; /* Increases space between letters */
   margin: 0.6em; /* Adds spacing */
+  width: 100%;
 }
 
 .form {
@@ -33,10 +41,6 @@ hr {
 .location {
   display: flex; /* Enables flexbox */
   justify-content: baseline; /* Aligns items to the baseline */
-}
-
-.location label {
-  width: 50%; /* Sets label width */
 }
 
 /* This styling allows form legend be placed in one column and radio buttons in the other */
@@ -57,6 +61,7 @@ fieldset.photoshoot > legend {
   display: flex; /* Enables flexbox */
   align-items: center; /* Centers items vertically */
   justify-content: baseline; /* Aligns items to the baseline */
+  font-size: 1.4rem;
 }
 
 textarea {
@@ -65,15 +70,10 @@ textarea {
   border-color: #e5989b; /* Sets border color to pink */
   margin: 0.2rem auto;
 }
-
 .button-area {
-  display: flex; /* Enables flexbox */
-  flex-direction: column; /* Stacks buttons vertically */
-  align-items: center; /* Centers buttons horizontally */
-}
-
-button {
-  width: 70%; /* Sets button width */
+  width: 70%;
+  margin: auto;
+  text-align: center;
 }
 
 .note {
@@ -81,5 +81,5 @@ button {
   opacity: 0.6; /* Sets opacity to 60% */
   padding: 1em; /* Adds padding inside */
   border-radius: 1rem; /* Make corners rounder */
-  margin: 1rem 2rem; /* Adds vertical spacing */
+  margin: 1rem auto; /* Adds vertical spacing */
 }

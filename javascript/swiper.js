@@ -14,11 +14,20 @@ const swiper = new Swiper(".slider_wrapper", {
     0: {
       slidesPerView: 1, // On small screens (0px and above), show 1 slide at a time
     },
-    768: {
-      slidesPerView: 2, // On medium screens (768px and above), show 2 slides at a time
+    750: {
+      slidesPerView: 2, // On medium screens (750px and above), show 2 slides at a time
     },
-    1024: {
-      slidesPerView: 3, // On large screens (1024px and above), show 3 slides at a time
+    1000: {
+      slidesPerView: 3, // On large screens (1000px and above), show 3 slides at a time
+    },
+    1250: {
+      slidesPerView: 4, // On large screens (1250px and above), show 4 slides at a time
+    },
+    1650: {
+      slidesPerView: 5, // On large screens (1500px and above), show 5 slides at a time
+    },
+    2000: {
+      slidesPerView: 6, // On large screens (2000px and above), show 6 slides at a time
     },
   },
 });

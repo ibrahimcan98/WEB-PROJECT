@@ -2,7 +2,7 @@
   /* Applies styles when screen width is 1000px or larger */
 
   body {
-    font-size: 1.8em; /* Increases font size for larger screens */
+    font-size: 2em; /* Increases font size for larger screens */
   }
 
   p,
@@ -95,13 +95,21 @@
   .auth_container {
     width: 45%; /* Reduces width for better alignment */
     height: 90%;
-    margin: 2rem 1rem; /* Adds spacing */
+    margin: 2rem auto; /* Adds spacing */
     padding: 2rem; /* Adds padding inside */
   }
   .side_container {
     width: 45%;
   }
 
+  /* BOOKING PAGE */
+  .booking_form {
+    width: 30%;
+  }
+  .booking_form input {
+    margin: auto;
+    width: 100%;
+  }
   /* Animations */
   @keyframes fadeOut {
     from {
