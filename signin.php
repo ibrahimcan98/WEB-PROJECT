@@ -1,35 +1,48 @@
 <?php
-
+session_start();
 include("connection.php");
 
-// Check if the form has been submitted using the POST method
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // Retrieve the form data sent via POST
-  $user_name = $_POST['userName'];    // Username input from the form
-  $user_email = $_POST['email'];      // Email input from the form
-  $user_password = $_POST['password']; // Password input from the form
+    // Form verilerini al
+    $user_name = trim($_POST['userName']);
+    $user_email = trim($_POST['email']);
+    $user_password = $_POST['password'];
 
-  // Hash the user's password using bcrypt before saving it to the database (for security)
-  $hashed_password = password_hash($user_password, PASSWORD_DEFAULT);
+    // Boş alan kontrolü
+    if (!empty($user_name) && !empty($user_email) && !empty($user_password)) {
+        // Şifreyi hashle
+        $hashed_password = password_hash($user_password, PASSWORD_DEFAULT);
 
-  // Prepare the SQL query to insert the user's data into the 'signin' table in the database
-  $query = $conn->prepare( "INSERT INTO signin (name, email, password) VALUES (?,?,?)");
+        // Hazırlanmış sorgu
+        $query = "INSERT INTO signin (name, email, password) VALUES (?, ?, ?)";
 
-  // Bind the form data (name, email, and hashed password) to the SQL query placeholders
-  // The 'sss' parameter means all three values are strings
-  $query->bind_param("sss", $user_name, $user_email, $hashed_password);
+        if ($stmt = mysqli_prepare($conn, $query)) {
+            // Parametreleri bağla
+            mysqli_stmt_bind_param($stmt, "sss", $user_name, $user_email, $hashed_password);
 
-  // Attempt to execute the query and check if it was successful
-  if ($query->execute()) {
-    // If the query is successful, display a success message
-    echo "added successfully";
-  } else {
-    // If there's an error executing the query, display the error message
-    echo "error: " . $query->error;
-  }
+            // Sorguyu çalıştır
+            if (mysqli_stmt_execute($stmt)) {
+                // Başarılıysa yönlendir
+                header("Location: justfooterandnav.php");
+                exit;
+            } else {
+                // Hata mesajı yazdır
+                echo "Veritabanına ekleme sırasında hata oluştu: " . mysqli_error($conn);
+            }
+
+            // Hazırlanan sorguyu kapat
+            mysqli_stmt_close($stmt);
+        } else {
+            echo "Sorgu hazırlanamadı: " . mysqli_error($conn);
+        }
+    } else {
+        echo "Lütfen tüm alanları doldurunuz.";
+    }
 }
 
-// Close the prepared query after execution to free up resources
-$query->close();
+// Bağlantıyı kapat
+mysqli_close($conn);
+?>
+
 
 ?>

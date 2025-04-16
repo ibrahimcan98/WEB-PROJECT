@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['name']) || !isset($_SESSION['email'])) {
+  header("Location: login.html"); // login.php değil, formun olduğu sayfa
+  exit;
+}
+
+$name = $_SESSION['name'];
+$email = $_SESSION['email'];
+?>
+
+
 <!-- FILE TO COPY HEADER AND FOOTER FROM -->
 
 
@@ -63,13 +76,14 @@
   </nav>
 </header>
   <!-- MAIN SECTION -->
-   
-    <?php include('booking.php'); ?>
 
-    <h1>Hoşgeldiniz, <?php echo htmlspecialchars($user['name']); ?>!</h1>
-    
-    <p>Email: <?php echo htmlspecialchars($user['email']); ?></p>
- 
+
+  <h1>Welcome, <?php echo htmlspecialchars($name); ?>!</h1>
+  <p>Email: <?php echo htmlspecialchars($email); ?></p>
+
+
+
+
   <!-- FOOTER -->
   <footer>
     <div id="container"> <!-- div is for grid-->
