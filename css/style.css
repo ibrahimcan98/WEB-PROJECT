@@ -266,19 +266,15 @@ hgroup {
   top: 0;
   left: 0;
   width: 100%;
+  border-radius: 1rem;
   height: 100%;
-  background: rgba(226, 221, 221, 0.555);
+  background: rgba(0, 0, 0, 0.4);
   z-index: 0;
 }
 .process-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-}
-.process-card h4,
-.process-card p,
-.process-card i {
-  color: white;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .process-card i {
@@ -287,13 +283,13 @@ hgroup {
   margin-bottom: 1rem;
 }
 .process-card h4 {
-  font-size: 1.2rem;
-  color: #202523;
+  font-size: 1.3rem;
+  color: white;
 }
 
 .process-card p {
   font-size: 0.95rem;
-  color: #202523;
+  color: white;
 }
 
 /* BOOK BUTTON */
