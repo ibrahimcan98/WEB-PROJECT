@@ -68,6 +68,7 @@
   .form input {
     width: 50%; /* Makes input fields take half of the width */
   }
+
   /* FOOTER */
   .footer-menu {
     display: flex; /* Turns the element into a flex container so its children can be laid out using flexbox. */
@@ -91,11 +92,14 @@
     animation: all 2s ease-in; /* Adds animation effect */
   }
 
-  .auth_container,
+  .auth_container {
+    width: 45%; /* Reduces width for better alignment */
+    height: 90%;
+    margin: 2rem 1rem; /* Adds spacing */
+    padding: 2rem; /* Adds padding inside */
+  }
   .side_container {
-    width: 40%; /* Reduces width for better alignment */
-    margin: 2em 0.5em; /* Adds spacing */
-    padding: 1em; /* Adds padding inside */
+    width: 45%;
   }
 
   /* Animations */

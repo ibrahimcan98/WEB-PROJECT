@@ -1,11 +1,12 @@
-.booking_container {
+.booking_form {
   display: flex; /* Enables flexbox layout */ /* Centers the container with margin */
   flex-direction: column; /* Stacks child elements vertically */
-  align-items: center; /* Centers elements horizontally */
+  align-items: baseline; /* Centers elements horizontally */
   /* Adds padding inside */
   justify-content: center; /* Centers elements vertically */
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; /* Adds shadow effect */
+  margin: 2rem;
 }
 
 hr {
@@ -15,7 +16,7 @@ hr {
   opacity: 0.2; /* Reduces visibility */
 }
 
-.booking_container h1 {
+.booking_form h1 {
   color: #e5989b; /* Sets text color to pink */
   text-align: center; /* Centers the heading */
   font-size: 2.6em; /* Increases font size */
@@ -59,9 +60,10 @@ fieldset.photoshoot > legend {
 }
 
 textarea {
-  width: 100%; /* Sets width to the full size of the page*/
+  width: 95%; /* Sets width to the 95% size of the page*/
   height: 6em; /* Sets bigger height */
   border-color: #e5989b; /* Sets border color to pink */
+  margin: 0.2rem auto;
 }
 
 .button-area {
@@ -79,5 +81,5 @@ button {
   opacity: 0.6; /* Sets opacity to 60% */
   padding: 1em; /* Adds padding inside */
   border-radius: 1rem; /* Make corners rounder */
-  margin: 1em 0; /* Adds vertical spacing */
+  margin: 1rem 2rem; /* Adds vertical spacing */
 }

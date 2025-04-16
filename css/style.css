@@ -86,7 +86,7 @@ Dark Button Styling
     22,
     21,
     21,
-    0.2
+    0.001
   ); /* Dark gray background with 20% transparency */
   padding: 2em; /* Adds space inside the container */
   display: flex; /* Enables flexbox layout */
@@ -98,7 +98,6 @@ Dark Button Styling
 
 .card_list .image {
   width: 20em; /* Sets image width */
-
   border-radius: 2em; /* Rounds image corners */
 }
 
@@ -125,7 +124,7 @@ Dark Button Styling
   display: flex; /* Enables flexbox layout */
   flex-direction: column; /* Stacks child elements vertically */
   justify-content: baseline; /* Aligns content to the baseline */
-  align-items: baseline; /* Aligns items to the text baseline */
+  align-items: end; /* Aligns items to the text baseline */
 }
 
 .about_her h1 {
@@ -142,6 +141,9 @@ Dark Button Styling
 
 .about_her p {
   margin-bottom: 1.2em; /* Adds bottom spacing */
+}
+.about_her .button_dark {
+  margin-right: 3em;
 }
 
 /* HOME GALLERY SIDE */
@@ -189,9 +191,6 @@ Dark Button Styling
   width: 12em; /* Sets image width */
   height: 260px; /* Sets image height */
   margin: 5px; /* Adds spacing around images */
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; /* Adds shadow effect */
 }
 
 /* PROCESS */
@@ -200,66 +199,101 @@ hgroup {
   flex-direction: row;
 }
 
-i.fa-star {
-  color: #ffd43b;
-}
-
-#process {
-  margin-bottom: 1em; /* Adds space below the section */
-  box-sizing: border-box; /* Ensures padding and border are included in the total size */
-  flex-wrap: wrap; /* Allows items to wrap to a new line if needed */
-  display: flex; /* Enables flexbox layout */
-  align-items: center; /* Aligns items vertically in the center */
-  justify-content: space-evenly; /* Evenly distributes items with equal spacing */
-}
-
 #process h1 {
-  font-size: 2em; /* Sets the font size for the heading */
-  margin: 0.7em 0; /* Adds vertical spacing */
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
 }
 
-#process i {
-  font-size: 2em; /* Sets the icon size */
+.process-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 0 2rem;
+  margin: 1rem 0;
+}
+.process-card:nth-child(1) {
+  background-image: url("../media/gettouch.png");
+  background-position: top;
 }
 
-.process_container {
-  display: flex; /* Enables flexbox layout */
-  justify-content: flex-start; /* Aligns content to the left */
-  text-align: center; /* Centers text inside the container */
-  flex-wrap: wrap; /* Allows items to wrap if they don’t fit */
+.process-card:nth-child(2) {
+  background-image: url("../media/planning.png");
+}
+.process-card:nth-child(3) {
+  background-image: url("../media/deposit.png");
+}
+.process-card:nth-child(4) {
+  background-image: url("../media/shooting.png");
+}
+.process-card:nth-child(5) {
+  background-image: url("../media/editing.png");
+  background-position: bottom;
+}
+.process-card:nth-child(6) {
+  background-image: url("../media/delivery.png");
+}
+.process-card:nth-child(7) {
+  background-image: url("../media/additional.png");
+}
+.process-card:nth-child(8) {
+  background-image: url("../media/rate.png");
+  background-position: center;
+}
+.process-card * {
+  position: relative;
+  z-index: 1;
+}
+.process-card {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 13rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
-.process_container i {
-  margin-bottom: 0.5em; /* Adds space below icons */
-  color: #e5989b; /* Sets icon color */
-  font-size: 2em; /* Sets icon size */
+.process-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(226, 221, 221, 0.555);
+  z-index: 0;
+}
+.process-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+.process-card h4,
+.process-card p,
+.process-card i {
+  color: white;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-.process_container .process {
-  width: 50%; /* Each item takes up 50% of the parent container */
-  margin: 1em 0; /* Adds vertical spacing */
-  position: relative; /* Allows for absolute positioning inside */
-  display: inline-block; /* Ensures inline-level display */
-  cursor: pointer; /* Changes cursor to pointer on hover */
+.process-card i {
+  font-size: 2.5rem;
+  color: #d67c8a;
+  margin-bottom: 1rem;
+}
+.process-card h4 {
+  font-size: 1.2rem;
+  color: #202523;
 }
 
-.tooltip-text {
-  visibility: hidden; /* Hides the tooltip by default */
-  width: 20em; /* Sets tooltip width */
-  color: #3b3030; /* Sets text color */
-  left: 0; /* Positions it at the left */
-  opacity: 0; /* Makes it fully transparent */
-  transition: opacity 0.3s ease-in-out; /* Smooth fade-in effect */
-}
-
-.process:hover .tooltip-text {
-  visibility: visible; /* Makes the tooltip visible */
-  opacity: 1; /* Fully visible when hovered */
-}
-
-.process summary > p {
-  font-size: 1.2em; /* Sets paragraph font size */
-  font-weight: bold; /* Makes the text bold */
+.process-card p {
+  font-size: 0.95rem;
+  color: #202523;
 }
 
 /* BOOK BUTTON */
@@ -288,9 +322,10 @@ i.fa-star {
   margin: 1.5em 0; /* Adds vertical margin */
   display: flex; /* Enables flexbox layout */
   flex-direction: column; /* Stacks elements vertically */
+  text-align: right; /* Centers text */
   align-items: center; /* Centers elements horizontally */
   justify-content: center; /* Centers elements vertically */
-  text-align: center; /* Centers text */
+
   border-radius: 8px; /* Rounds the edges of the form */
   padding: 20px; /* Adds space inside the form */
   background: #f5f5f5; /* Sets background color to light gray */
@@ -299,6 +334,7 @@ i.fa-star {
 
 .form label {
   display: block; /* Makes the label appear on a new line */
+
   font-weight: bold; /* Makes the label text bold */
   margin-top: 10px; /* Adds space above the label */
 }

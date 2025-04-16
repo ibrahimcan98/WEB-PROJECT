@@ -35,11 +35,7 @@
   .footer-item {
     margin: 1em 1em; /* Adds spacing between footer items */
   }
-
-  /* LOG IN / SIGN IN */
-  .login_container,
-  .side_container,
-  .signin_container {
-    width: 60%; /* Sets container width to 60% of the screen */
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr); /* tablet */
   }
 }

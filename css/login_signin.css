@@ -51,8 +51,22 @@ input {
   transform: translateY(-50%); /* Aligns icon vertically */
 }
 
-#password {
-  color: #e5989b;
+#passwordInput {
+  position: relative;
+}
+.password-rules {
+  position: absolute;
+  display: none;
+  padding: 1em;
+  width: 70%;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: left;
+  color: #555;
+  background-color: #f7f7f7;
+  border-radius: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: all 10s ease;
 }
 
 .socialmedia {
@@ -103,7 +117,7 @@ button {
   justify-content: center; /* Centers items horizontally */
 }
 
-.signin {
+.signup {
   animation: fadeout 1s ease-in-out; /* Applies fade-out animation */
 }
 .login {

@@ -10,6 +10,12 @@ const logsing = document.querySelector(".logsing-menu");
 // Select the account icon (user icon) that toggles the Log In / Sign In menu
 const account = document.querySelector(".account");
 
+// Select the password input field using its ID "passwordInput"
+const passwordInput = document.getElementById("passwordInput");
+
+// Select the password rules box using its ID "passwordRules"
+const passwordRules = document.getElementById("passwordRules");
+
 // ============================
 // Toggle Hamburger Menu (Mobile Navigation)
 // ============================
@@ -51,4 +57,22 @@ document.addEventListener("click", (event) => {
     navMenu.classList.remove("active"); // Hide the navigation menu
     hamburger.classList.remove("active"); // Remove active state from hamburger button
   }
+});
+
+// ============================
+// Show password rules when the input is focused (clicked)
+// ============================
+passwordInput.addEventListener("focus", () => {
+  // When the user clicks on (focuses) the password field,
+  // make the password rules box visible
+  passwordRules.style.display = "block";
+});
+
+// ============================
+// Hide password rules when the input loses focus
+// ============================
+passwordInput.addEventListener("blur", () => {
+  // When the user clicks away from (blurs) the password field,
+  // hide the password rules box
+  passwordRules.style.display = "none";
 });
