@@ -27,16 +27,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 exit;
             } else {
                 // Hata mesajı yazdır
-                echo "Veritabanına ekleme sırasında hata oluştu: " . mysqli_error($conn);
+                echo "something went wrong on query: " . mysqli_error($conn);
             }
 
             // Hazırlanan sorguyu kapat
             mysqli_stmt_close($stmt);
         } else {
-            echo "Sorgu hazırlanamadı: " . mysqli_error($conn);
+            echo "something went wrong: " . mysqli_error($conn);
         }
     } else {
-        echo "Lütfen tüm alanları doldurunuz.";
+        echo "fill up all area.";
     }
 }
 
