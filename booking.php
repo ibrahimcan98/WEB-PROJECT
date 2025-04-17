@@ -1,34 +1,90 @@
 <?php
-    include("connection.php");
+session_start();
 
-// Check if the form was submitted using the POST method
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve the form data sent via POST
-    $user_date = $_POST['date'];     // The date input from the form
-    $user_time = $_POST['time'];     // The time input from the form
-    $user_text = $_POST['text'];     // The text input from the form
-    // $user_location = $_POST['location_book'];  // This line is commented out but could be used for location data
-    
-    // Format the date to match the MySQL date format (YYYY-MM-DD)
+
+
+
+include("connection.php");
+
+
+$can_book = isset($_SESSION['Username']); // if it's true
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && $can_book) {
+    $user_date = $_POST['date'];
+    $user_time = $_POST['time'];
+    $user_text = $_POST['text'];
+    $user_id = 12;
+    //$user_id = $_SESSION['UserID'];
+
     $formatted_date = date("Y-m-d", strtotime($user_date));
 
-    // Prepare the SQL query to insert the booking data into the "booking" table
-    $query = $conn->prepare("INSERT INTO booking (date, time, text) VALUES (?,?,?)");
+    $query = $conn->prepare("INSERT INTO Booking (UserID, DateOfShoot, TimeOfShoot, TypeOfShoot, Message) VALUES (?, ?, ?, 'Portrait', ?)"); // TODO fix user id session
+    $query->bind_param("isss", $user_id,$formatted_date, $user_time, $user_text);
 
-    // Bind the form values to the prepared statement
-    // The "sss" means all three parameters (date, time, and text) are strings
-    $query->bind_param("sss", $formatted_date, $user_time, $user_text);
-
-    // Execute the query and check if it was successful
     if ($query->execute()) {
-        // If the query is successful, output a success message
-        echo "added date: " . $formatted_date . " successfully";
+        echo "<script>alert('booking successful.');</script>";
     } else {
-        // If there's an error with the query execution, output the error message
-        echo "error: " . $query->error;
+        echo "<script>alert('Error: " . $query->error . "');</script>";
     }
-}
 
-// Close the prepared query after execution to free up resources
-$query->close();
+    $query->close();
+}
 ?>
+
+<?php
+include ("header.php");
+?>
+  <!-- BOOKING FORM -->
+  <main class="booking_container">
+    <aside class="form">
+      <?php if ($can_book): ?>
+        <!-- while user login -->
+        <form action="booking.php" class="booking_form" method="POST">
+          <h1>Booking</h1>
+          <label for="">Prefered date</label>
+          <input type="date" id="date_book" name="date" required />
+          <hr />
+          <label for="">Prefered time</label>
+          <input type="time" id="time_book" name="time" required />
+          <hr />
+          <label for="location_book">Location</label>
+          <select name="location_book" id="location_book" required>
+            <option value="Dublin">Dublin</option>
+            <option value="Cork">Cork</option>
+            <option value="Limerick">Limerick</option>
+          </select>
+          <hr />
+          <fieldset class="photoshoot">
+            <legend>Type of a photoshoot</legend>
+            <div class="checkbox">
+              <label for="portrait">Portrait</label>
+              <input type="checkbox" name="portrait" id="portrait" value="portrait" />
+              <label for="family">Family</label>
+              <input type="checkbox" name="family" id="family" value="family" />
+            </div>
+          </fieldset>
+          <hr />
+          <label for="book_message">Your message</label>
+          <textarea name="text" id="book_message"></textarea>
+          <hr />
+          <p class="note">
+            Your preferred date and time may not fit into my timetable, so I
+            will be in contact with you to confirm your booking date and
+            time
+          </p>
+          <section class="button-area">
+            <button type="submit" class="button-area" name="submit">Finish booking</button>
+          </section>
+        </form>
+      <?php else: ?>
+        <!-- Giriş yapmamışsa uyarı ver -->
+        <h2 style="color: red;">please make sure you loged in!</h2>
+        <a href="login.php">login</a>
+      <?php endif; ?>
+    </aside>
+  </main>
+
+
+  <script src="./javascript/script.js"></script>
+</body>
+</html>

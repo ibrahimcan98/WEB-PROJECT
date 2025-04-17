@@ -7,14 +7,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user_name = trim($_POST['userName']);
     $user_email = trim($_POST['email']);
     $user_password = $_POST['password'];
+    
 
     // if it s not empty
     if (!empty($user_name) && !empty($user_email) && !empty($user_password)) {
         // password hash
         $hashed_password = password_hash($user_password, PASSWORD_DEFAULT);
-
+        echo $hashed_password;
         // query
-        $query = "INSERT INTO signin (name, email, password) VALUES (?, ?, ?)";
+        $query = "INSERT INTO Users (Username,Email, Passcode, ProfileImg) VALUES (?, ?, ?,?)";
 
         if ($stmt = mysqli_prepare($conn, $query)) {
             
@@ -23,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // run the query
             if (mysqli_stmt_execute($stmt)) {
                 // direct to
-                header("Location: justfooterandnav.php");
+                header("Location: login.html");
                 exit;
             } else {
                 // write error
@@ -40,9 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-// Bağlantıyı kapat
+// turn off conn
 mysqli_close($conn);
 ?>
 
-
-?>

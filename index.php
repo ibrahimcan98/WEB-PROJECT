@@ -1,5 +1,7 @@
 <?php
+session_start();
 include("header.php");
+
 ?>
   <!-- MAIN SECTION -->
   <main>
