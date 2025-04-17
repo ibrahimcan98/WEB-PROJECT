@@ -106,15 +106,16 @@ button {
 }
 
 .side_container {
+  margin: 2rem auto;
   display: flex; /* Enables flexbox */
   width: 95%; /* Takes up 95% of available width */
   border-radius: 1em; /* Rounds corners */
-  margin: 3em auto; /* Centers container with spacing */
   padding: 5em 0; /* Adds vertical padding */
   align-items: center; /* Centers items vertically */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Adds shadow effect */
   flex-direction: column; /* Stacks child elements vertically */
   justify-content: center; /* Centers items horizontally */
+  height: 90%;
 }
 
 .signup {

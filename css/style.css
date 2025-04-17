@@ -94,11 +94,11 @@ Dark Button Styling
   align-items: center; /* Centers elements horizontally */
   justify-content: center; /* Centers elements vertically */
   width: 100%; /* Fills the available width */
+  height: 100%;
 }
 
 .card_list .image {
   width: 20em; /* Sets image width */
-  border-radius: 2em; /* Rounds image corners */
 }
 
 .swiper-slide {
