@@ -17,8 +17,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $can_book) {
         echo "<script>alert('booking successful.');</script>";
     } else {
         echo "<script>alert('Error: " . $query->error . "');</script>";
+  
     }
     $query->close();
+
 }
 include ("header.php");
 ?>
