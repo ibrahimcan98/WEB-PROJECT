@@ -1,36 +1,24 @@
 <?php
 session_start();
-
-
-
-
 include("connection.php");
-
-
 $can_book = isset($_SESSION['Username']); // if it's true
-
 if ($_SERVER["REQUEST_METHOD"] == "POST" && $can_book) {
     $user_date = $_POST['date'];
     $user_time = $_POST['time'];
     $user_text = $_POST['text'];
     $user_id = 12;
     //$user_id = $_SESSION['UserID'];
-
     $formatted_date = date("Y-m-d", strtotime($user_date));
-
     $query = $conn->prepare("INSERT INTO Booking (UserID, DateOfShoot, TimeOfShoot, TypeOfShoot, Message) VALUES (?, ?, ?, 'Portrait', ?)"); // TODO fix user id session
     $query->bind_param("isss", $user_id,$formatted_date, $user_time, $user_text);
-
     if ($query->execute()) {
         echo "<script>alert('booking successful.');</script>";
     } else {
         echo "<script>alert('Error: " . $query->error . "');</script>";
     }
-
     $query->close();
 }
 ?>
-
 <?php
 include ("header.php");
 ?>
@@ -83,8 +71,6 @@ include ("header.php");
       <?php endif; ?>
     </aside>
   </main>
-
-
   <script src="./javascript/script.js"></script>
 </body>
 </html>
