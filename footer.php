@@ -1,4 +1,4 @@
-    <!-- FOOTER --> 
+    <!-- FOOTER -->
     <footer>
       <div id="container">
         <address class="contact">
