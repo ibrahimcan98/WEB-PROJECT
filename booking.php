@@ -8,6 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $can_book) {
     $user_text = $_POST['text'];
     $user_id = 12;
     //$user_id = $_SESSION['UserID'];
+    
     $formatted_date = date("Y-m-d", strtotime($user_date));
     $query = $conn->prepare("INSERT INTO Booking (UserID, DateOfShoot, TimeOfShoot, TypeOfShoot, Message) VALUES (?, ?, ?, 'Portrait', ?)"); // TODO fix user id session
     $query->bind_param("isss", $user_id,$formatted_date, $user_time, $user_text);
