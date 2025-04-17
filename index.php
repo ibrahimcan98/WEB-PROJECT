@@ -1,4 +1,5 @@
 <?php
+$page_title = "Home";
 include("app/nav.php");
 ?>
 
@@ -37,7 +38,7 @@ include("app/nav.php");
           been studying photography at Griffith College Dublin, continuously
           refining my skills and artistic vision.
         </p>
-        <a href="about.html" class="button_dark">More</a>
+        <a href="about.php" class="button_dark">More</a>
       </article>
     </section>
     <!-- Gallery for portrait and family photo -->
@@ -142,7 +143,7 @@ include("app/nav.php");
 
       <!-- BOOK BUTTON -->
       <section class="book">
-        <a href="booking.html">Book</a>
+        <a href="booking.php">Book</a>
       </section>
 
       <!-- FORM SECTION -->

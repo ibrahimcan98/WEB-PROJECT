@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <?php 
+    echo "<title>".$page_title."</title>";
+    ?>
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <!-- Google fonts -->
@@ -16,6 +18,16 @@
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/tablet.css" />
     <link rel="stylesheet" href="./css/desktop.css" />
+    <?php 
+    $link_style_start = '<link rel="stylesheet" href='.'"';
+    $link_style_end = '"/>';
+    if ($page_title == "Booking") {
+       echo  $link_style_start.'./css/booking.css'.$link_style_end;
+    }
+    if ($page_title == "Sign Up" || $page_title == "Login") {
+      echo  $link_style_start."./css/login_signup.css".$link_style_end;
+    }
+    ?>
   </head>
   <body>
     <!-- NAVBAR -->
