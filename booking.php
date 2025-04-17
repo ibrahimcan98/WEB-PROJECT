@@ -75,7 +75,7 @@ include("app/nav.php");
     </main>
 
 <?php
-include("connection.php");
+include("app/connection.php");
 
 // Check if the form was submitted using the POST method
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

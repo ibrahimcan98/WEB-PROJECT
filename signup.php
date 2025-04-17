@@ -55,7 +55,7 @@ include("app/nav.php");
 include("app/footer.php");
 ?>
 <?php
-include("media/connection.php");
+include("app/connection.php");
 
 // Check if the form has been submitted using the POST method
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

@@ -27,10 +27,5 @@
         ® Group K (Elvira Negreeva, Ibrahim Can Onder, Ibrahim Gurses), Griffith College, 2025
       </section>
     </footer>
-  <!-- Script -->
-    <script src="./javascript/script.js"></script>
-      <!-- SwiperJS Script for image carousel -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="./javascript/swiper.js"></script>
   </body>
 </html>
