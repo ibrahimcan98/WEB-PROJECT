@@ -18,8 +18,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $can_book) {
     }
     $query->close();
 }
-?>
-<?php
 include ("header.php");
 ?>
   <!-- BOOKING FORM -->
