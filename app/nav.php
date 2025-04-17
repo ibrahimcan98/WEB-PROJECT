@@ -30,14 +30,6 @@
     ?>
   </head>
   <body>
-<<<<<<< HEAD
-=======
-      <!-- Script -->
-      <script src="./javascript/script.js"></script>
-      <!-- SwiperJS Script for image carousel -->
-      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-      <script src="./javascript/swiper.js"></script>
->>>>>>> b034ef12dbe88aef31cb3deb6c04e3274018166d
     <!-- NAVBAR -->
     <header>
       <nav id="navbar">
