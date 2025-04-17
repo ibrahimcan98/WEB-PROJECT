@@ -4,19 +4,20 @@
   align-items: baseline; /* Centers elements horizontally */
   /* Adds padding inside */
   justify-content: center; /* Centers elements vertically */
+  text-align: left;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; /* Adds shadow effect */
-  margin: 2rem;
+  margin: 2rem auto;
   padding: 1rem;
 }
-input {
+.booking_form input {
   width: 100%;
   margin: auto;
 }
-label {
+.booking_form label {
   margin: 0.5em 0;
 }
-hr {
+.booking_form hr {
   margin: 1em 0; /* Adds spacing above and below */
   color: #e5989b; /* Sets horizontal rule color */
   border: 1px solid #e5989b; /* Adds border */
@@ -33,22 +34,17 @@ hr {
   width: 100%;
 }
 
-.form {
-  margin: auto; /* Centers the form */
-  padding: 0;
-}
-
-.location {
+.booking_form .location {
   display: flex; /* Enables flexbox */
   justify-content: baseline; /* Aligns items to the baseline */
 }
 
 /* This styling allows form legend be placed in one column and radio buttons in the other */
-fieldset {
+.booking_form fieldset {
   display: contents;
 }
 
-fieldset.photoshoot > legend {
+.booking_form fieldset.photoshoot > legend {
   font-weight: bold; /* Makes legend same as other form labels*/
 }
 
@@ -64,20 +60,36 @@ fieldset.photoshoot > legend {
   font-size: 1.4rem;
 }
 
-textarea {
+.booking_form textarea {
   width: 95%; /* Sets width to the 95% size of the page*/
   height: 6em; /* Sets bigger height */
   border-color: #e5989b; /* Sets border color to pink */
   margin: 0.2rem auto;
 }
-.button-area {
+.booking_form .button-area {
   width: 70%;
   margin: auto;
   text-align: center;
 }
+.booking_form button {
+  margin: 1em 0; /* Adds vertical spacing */
+  background-color: #e5989b; /* Sets background color to light pink */
+  padding: 1em 3em; /* Adds padding inside the button */
+  border: 1px solid transparent; /* Removes border */
+  border-radius: 4em; /* Rounds the button edges */
+  color: white; /* Sets text color to white*/
+  cursor: pointer; /* Changes cursor to pointer */
+  transition: 0.5s ease; /* Adds smooth transition effect */
+}
 
-.note {
-  background-color: #e5989b; /* Sets background color to pink*/
+.booking_form button:hover {
+  background-color: #f5f5f5; /* Changes background to light gray on hover */
+  color: #e5989b; /* Changes text color to light pink on hover */
+  border: 1px solid #3b3030; /* Adds a dark brown border on hover */
+}
+
+.booking_form .note {
+  background-color: #e5989b;
   opacity: 0.6; /* Sets opacity to 60% */
   padding: 1em; /* Adds padding inside */
   border-radius: 1rem; /* Make corners rounder */

@@ -1,7 +1,10 @@
 <?php
-$page_title = "Gallery";
-include("app/nav.php");
+$page_title = "Login";
+include("./nav.php");
 ?>
+
+
+
 <?php
-include("app/footer.php");
+include("./footer.php");
 ?>

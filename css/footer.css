@@ -12,7 +12,6 @@ footer {
   width: 100%; /* Makes footer full width */
   color: #3b3030; /* Sets text color to dark brown */
   position: relative; /* Ensures proper placement in layout */
-  bottom: 0; /* Positions footer at the bottom */
   margin-top: auto; /* Pushes the footer to the bottom of the page */
 }
 

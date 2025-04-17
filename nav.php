@@ -12,12 +12,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- CSS -->
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" /> 
     <link rel="stylesheet" href="./css/navbar.css" />
     <link rel="stylesheet" href="./css/footer.css" />
-    <link rel="stylesheet" href="./css/tablet.css" />
-    <link rel="stylesheet" href="./css/desktop.css" />
+    
     <?php 
     $link_style_start = '<link rel="stylesheet" href='.'"';
     $link_style_end = '"/>';
@@ -28,13 +29,12 @@
       echo  $link_style_start."./css/login_signup.css".$link_style_end;
     }
     ?>
+  
+    <link rel="stylesheet" href="./css/tablet.css" />
+    <link rel="stylesheet" href="./css/desktop.css" />
+    
   </head>
   <body>
-      <!-- Script -->
-      <script src="./javascript/script.js"></script>
-      <!-- SwiperJS Script for image carousel -->
-      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-      <script src="./javascript/swiper.js"></script>
     <!-- NAVBAR -->
     <header>
       <nav id="navbar">

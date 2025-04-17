@@ -1,10 +1,10 @@
 <?php
 $page_title = "Login";
-include("app/nav.php");
+include("./nav.php");
 ?>
 
     <!-- MAIN SECTION -->
-    <main id="login_container">
+  <main id="login_container">
       <section class="auth_container login_auth">
         <form action="login.php" method="POST">
           <h1>Login</h1>
@@ -46,6 +46,7 @@ include("app/nav.php");
       </aside>
     </main>
 
+    
 <?php
-include("app/footer.php");
+include("./footer.php");
 ?>

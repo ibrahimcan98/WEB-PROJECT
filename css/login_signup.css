@@ -1,13 +1,15 @@
-main {
-  display: flex; /* Enables flexbox layout */
-  flex-direction: column; /* Stacks child elements vertically */
-  justify-content: flex-start; /* Aligns content at the top */
-  align-items: baseline; /* Aligns content to the text baseline */
+#login_container,
+#signup_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  margin: 2rem 2rem;
 }
 
 .auth_container {
   font-size: 1.2em; /* Sets text size */
-  width: 95%; /* Takes up 95% of available width */
+  width: 100%; /* Takes up 95% of available width */
   margin: 0.5em auto; /* Centers container with top-bottom margin */
   padding: 2em; /* Adds space inside */
   background: white; /* White background */
@@ -28,7 +30,7 @@ main {
   text-shadow: 2px 2px black; /* Black text shadow */
 }
 
-input {
+.input-place input {
   width: 100%; /* Full width input */
   padding: 1em; /* Adds padding */
   margin: 1em auto; /* Centers input with margin */
@@ -55,10 +57,10 @@ input {
   position: relative;
 }
 .password-rules {
-  position: absolute;
   display: none;
+  position: absolute;
   padding: 1em;
-  width: 70%;
+  width: 60%;
   font-size: 1rem;
   font-weight: bold;
   text-align: left;
@@ -104,18 +106,24 @@ button {
   cursor: pointer; /* Changes cursor to pointer */
   transition: 0.5s ease; /* Adds smooth transition effect */
 }
+#signin_container {
+  display: flex;
+  min-height: 100vh;
+  margin: 2rem 2rem;
+}
 
 .side_container {
-  margin: 2rem auto;
+  height: 100%;
+  width: 100%; /* Takes up 95% of available width */
   display: flex; /* Enables flexbox */
-  width: 95%; /* Takes up 95% of available width */
   border-radius: 1em; /* Rounds corners */
-  padding: 5em 0; /* Adds vertical padding */
+  margin: 2em auto;
+  padding: 1em 0; /* Adds vertical padding */
   align-items: center; /* Centers items vertically */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Adds shadow effect */
   flex-direction: column; /* Stacks child elements vertically */
   justify-content: center; /* Centers items horizontally */
-  height: 90%;
+  text-align: center;
 }
 
 .signup {

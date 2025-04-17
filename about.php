@@ -1,10 +1,10 @@
 <?php
 $page_title = "About";
-    include("app/nav.php");
+    include("./nav.php");
 ?>
 
 <!-- MAIN SECTION -->
-  <section id="about">
+  <section id="about" class="about_detail">
     <img src="./media/profile_ivana.jpeg" alt="Photographer Ivana" />
     <article class="about_her">
       <h1>My name is <span>Ivana Tumbeva</span></h1>
@@ -41,5 +41,5 @@ $page_title = "About";
   </section>
 
 <?php
-    include("app/footer.php");
+    include("./footer.php");
 ?>

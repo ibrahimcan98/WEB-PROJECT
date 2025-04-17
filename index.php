@@ -1,6 +1,6 @@
 <?php
 $page_title = "Home";
-include("app/nav.php");
+include("./nav.php");
 ?>
 
 <!-- MAIN SECTION -->
@@ -10,7 +10,13 @@ include("app/nav.php");
       <div class="slider_wrapper">
         <figure class="card_list swiper-wrapper">
           <picture class="card_item swiper-slide">
-            <img src="./media/IMG_0503-1-2.jpg" alt="" class="image" />
+            <img src="./media/family5.jpg" alt="" class="image" />
+          </picture>
+          <picture class="card_item swiper-slide">
+            <img src="./media/family4.jpg" alt="" class="image" />
+          </picture>
+          <picture class="card_item swiper-slide">
+            <img src="./media/DSC01073.jpg" alt="" class="image" />
           </picture>
           <picture class="card_item swiper-slide">
             <img src="./media/IMG_1490.jpg" alt="" class="image" />
@@ -27,8 +33,7 @@ include("app/nav.php");
     <!-- About -->
     <section id="about">
       <!-- Image of the photographer -->
-      <img src="./media/profile.jpg" alt="" />
-
+      <img src="./media/profile_ivana.jpeg" alt="" />
       <!-- Description of the photographer -->
       <article class="about_her">
         <h1>Hello, I'm <span>Ivana Tumbeva</span></h1>
@@ -147,7 +152,7 @@ include("app/nav.php");
       </section>
 
       <!-- FORM SECTION -->
-      <form action="submit.php" method="post" class="form">
+      <form action="submit.php" method="post" class="contact_form" id="">
         <h1>
           If you want to find out more, contact me with form below:
         </h1>
@@ -168,5 +173,5 @@ include("app/nav.php");
 
 
 <?php
-include("app/footer.php");
+include("./footer.php");
 ?>
