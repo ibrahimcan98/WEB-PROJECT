@@ -10,22 +10,22 @@ include("./nav.php");
       <div class="slider_wrapper">
         <figure class="card_list swiper-wrapper">
           <picture class="card_item swiper-slide">
-            <img src="./media/family5.jpg" alt="" class="image" />
+            <img src="./media/family5.png" alt="" class="image" />
           </picture>
           <picture class="card_item swiper-slide">
-            <img src="./media/family4.jpg" alt="" class="image" />
+            <img src="./media/family4.png" alt="" class="image" />
           </picture>
           <picture class="card_item swiper-slide">
-            <img src="./media/DSC01073.jpg" alt="" class="image" />
+            <img src="./media/DSC01073.png" alt="" class="image" />
           </picture>
           <picture class="card_item swiper-slide">
-            <img src="./media/IMG_1490.jpg" alt="" class="image" />
+            <img src="./media/IMG_1490.png" alt="" class="image" />
           </picture>
           <picture class="card_item swiper-slide">
-            <img src="./media/IMG_1678-Edit.jpg" alt="" class="image" />
+            <img src="./media/DSC08536.png" alt="" class="image" />
           </picture>
           <picture class="card_item swiper-slide">
-            <img src="./media/Eduard final.jpg" alt="" class="image" />
+            <img src="./media/Eduard final.png" alt="" class="image" />
           </picture>
         </figure>
       </div>
@@ -33,7 +33,7 @@ include("./nav.php");
     <!-- About -->
     <section id="about">
       <!-- Image of the photographer -->
-      <img src="./media/profile_ivana.jpeg" alt="" />
+      <img src="./media/profile_ivana.png" alt="" />
       <!-- Description of the photographer -->
       <article class="about_her">
         <h1>Hello, I'm <span>Ivana Tumbeva</span></h1>
@@ -52,21 +52,21 @@ include("./nav.php");
         <article class="portrait">
           <h2>Portrait</h2>
           <figure class="portrait_photo">
-            <img src="./media/DSC01061.jpg" alt="" />
-            <img src="./media/DSC01073.jpg" alt="" />
-            <img class="desktop tablet" src="./media/portrait1.jpg" alt="" />
-            <img class="desktop tablet" src="./media/portrait.jpg" alt="" />
-            <img class="desktop" src="./media/portrait2.jpg" alt="" />
+            <img src="./media/DSC01061.png" alt="" />
+            <img src="./media/DSC01073.png" alt="" />
+            <img class="desktop tablet" src="./media/DSC08536.png" alt="" />
+            <img class="desktop tablet" src="./media/Eduard final.png" alt="" />
+            <img class="desktop" src="./media/DSC08384.png" alt="" />
           </figure>
         </article>
         <article class="family_photo">
           <h2>Family Photoshots</h2>
           <figure class="family_photo">
-            <img src="./media/family2.jpg" alt="" />
-            <img src="./media/IMG_1501.jpg" alt="" />
-            <img class="desktop tablet" src="./media/family3.jpg" alt="" />
-            <img class="desktop tablet" src="./media/family4.jpg" alt="" />
-            <img class="desktop" src="./media/family5.jpg" alt="" />
+            <img src="./media/family2.png" alt="" />
+            <img src="./media/.png" alt="" />
+            <img class="desktop tablet" src="./media/family3.png" alt="" />
+            <img class="desktop tablet" src="./media/family4.png" alt="" />
+            <img class="desktop" src="./media/family5.png" alt="" />
           </figure>
         </article>
       </figure>

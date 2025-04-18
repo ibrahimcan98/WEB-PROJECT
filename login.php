@@ -1,10 +1,51 @@
 <?php
+// Set the title of the page
 $page_title = "Login";
-include("./nav.php");
-?>
 
+// Include the database connection and the navigation bar
+include("./connection.php");
+include("./nav.php");
+////var_dump($_POST);
+// Check if the form was submitted by checking if "login" button was clicked
+if (isset($_POST['submit'])){
+    // Get the email and password entered by the user
+    $email    = $_POST['email'];
+    $password = $_POST['password'];
+
+    // Prepare a SQL query to find a user with the entered email
+    $stmt = $conn->prepare("SELECT UserID, Username, Email, Passcode FROM Users WHERE Email = ?");
+    $stmt->bind_param("s", $email); // Bind the email to the query
+    $stmt->execute(); // Run the query
+
+    // Get the result of the query
+    $result = $stmt->get_result();
+    //var_dump($result);
+    $user = $result->fetch_assoc();
+    ////var_dump($user);
+    // If a user was found with that email
+    if ($result) {
+        // Check if the entered password is correct (match with the hashed password)
+        if (password_verify($password, $user['Passcode'])) {
+            // If correct, save user info to session variables
+            $_SESSION['UserID'] = $user['UserID'];
+            $_SESSION['Username'] = $user['Username'];
+            $_SESSION['Email'] = $user['Email'];
+            // Redirect the user to the account page
+            header("Location: account.php");
+        } else {
+            // If password is wrong, show error message
+            echo "Incorrect password.";
+        }
+    } else {
+      //var_dump($_SESSION);
+        // If no user found with that email, show error message
+        echo "No user found with that email.";
+    }
+} 
+else 
+?>
     <!-- MAIN SECTION -->
-  <main id="login_container">
+    <main id="login_container">
       <section class="auth_container login_auth">
         <form action="login.php" method="POST">
           <h1>Login</h1>
@@ -27,6 +68,7 @@ include("./nav.php");
               <a href="#">Forgot your password?</a>
             </li>
           </ul>
+          
           <button type="submit" name="submit">Login</button>
         </form>
 
@@ -46,7 +88,6 @@ include("./nav.php");
       </aside>
     </main>
 
-    
 <?php
 include("./footer.php");
 ?>

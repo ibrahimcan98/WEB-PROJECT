@@ -5,7 +5,7 @@ $page_title = "About";
 
 <!-- MAIN SECTION -->
   <section id="about" class="about_detail">
-    <img src="./media/profile_ivana.jpeg" alt="Photographer Ivana" />
+    <img src="./media/profile_ivana.png" alt="Photographer Ivana" />
     <article class="about_her">
       <h1>My name is <span>Ivana Tumbeva</span></h1>
       <p>

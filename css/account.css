@@ -1,0 +1,76 @@
+/* ACCOUNT SECTION */
+
+#account {
+  padding: 2rem;
+}
+
+#account h1 {
+  color: #e5989b; /* Sets text color to pink */
+  font-size: 2.6em; /* Increases font size */
+  text-shadow: 2px 2px black; /* Adds black text shadow */
+  letter-spacing: 0.4em; /* Increases space between letters */
+  margin: 0.6em; /* Adds spacing */
+  width: 100%;
+}
+#account_container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  max-width: 30rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.account_h2 {
+  margin: 2rem;
+  text-align: center;
+}
+
+.booking-box {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.booking-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.booking-info p {
+  margin: 0.3rem 0;
+}
+
+.booking-actions {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.edit-btn {
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  background-color: #e5989b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  padding: 0.5rem 1rem;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.no-booking-message {
+  text-align: center;
+}
