@@ -382,7 +382,6 @@ hgroup {
   text-shadow: 2px 2px black; /* Adds black text shadow */
   letter-spacing: 0.4em; /* Increases space between letters */
   margin: 0.6em; /* Adds spacing */
-  width: 100%;
 }
 
 .gallery {
