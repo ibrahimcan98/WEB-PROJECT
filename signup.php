@@ -1,4 +1,5 @@
 <?php
+ob_start();
 $page_title = "Sign Up";
 include("./nav.php");
 ?>
@@ -12,7 +13,7 @@ include("./nav.php");
     </aside>
     <!-- Sign in form -->
     <section class="auth_container sigin_auth">
-      <form action="login.php" method="POST">
+      <form action="signup.php" method="POST">
         <h1>Sing Up</h1>
         <!-- Input fields -->
         <ul>
@@ -60,7 +61,7 @@ include("./footer.php");
 include("./connection.php");
 
 // Check if the form has been submitted using the POST method
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (isset($_POST['submit'])) {
   // Retrieve the form data sent via POST
   $user_name = $_POST['userName'];    // Username input from the form
   $user_email = $_POST['email'];      // Email input from the form
@@ -76,10 +77,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // The 'sss' parameter means all three values are strings
   $query->bind_param("sss", $user_name, $user_email, $hashed_password);
 
+  //var_dump($query);
   // Attempt to execute the query and check if it was successful
   if ($query->execute()) {
     // If the query is successful, display a success message
-    echo "added successfully";
+    echo "Added successfully";
+    header("Location: login.php");
+    exit();
   } else {
     // If there's an error executing the query, display the error message
     echo "error: " . $query->error;
@@ -87,6 +91,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Close the prepared query after execution to free up resources
   $query->close();
 }
-
-
 ?>
+<?php ob_end_flush(); ?>

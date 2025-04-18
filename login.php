@@ -5,7 +5,7 @@ $page_title = "Login";
 // Include the database connection and the navigation bar
 include("./connection.php");
 include("./nav.php");
-////var_dump($_POST);
+//var_dump($_POST);
 // Check if the form was submitted by checking if "login" button was clicked
 if (isset($_POST['submit'])){
     // Get the email and password entered by the user
@@ -16,16 +16,15 @@ if (isset($_POST['submit'])){
     $stmt = $conn->prepare("SELECT UserID, Username, Email, Passcode FROM Users WHERE Email = ?");
     $stmt->bind_param("s", $email); // Bind the email to the query
     $stmt->execute(); // Run the query
-
     // Get the result of the query
     $result = $stmt->get_result();
     //var_dump($result);
     $user = $result->fetch_assoc();
-    ////var_dump($user);
+    //var_dump($user);
     // If a user was found with that email
     if ($result) {
         // Check if the entered password is correct (match with the hashed password)
-        if (password_verify($password, $user['Passcode'])) {
+        if ($user && password_verify($password, $user['Passcode'])) {
             // If correct, save user info to session variables
             $_SESSION['UserID'] = $user['UserID'];
             $_SESSION['Username'] = $user['Username'];
