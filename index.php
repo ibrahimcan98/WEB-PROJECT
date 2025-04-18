@@ -63,7 +63,7 @@ include("./nav.php");
           <h2>Family Photoshots</h2>
           <figure class="family_photo">
             <img src="./media/family2.png" alt="" />
-            <img src="./media/.png" alt="" />
+            <img src="./media//IMG_1501.png" alt="" />
             <img class="desktop tablet" src="./media/family3.png" alt="" />
             <img class="desktop tablet" src="./media/family4.png" alt="" />
             <img class="desktop" src="./media/family5.png" alt="" />
