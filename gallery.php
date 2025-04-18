@@ -6,9 +6,9 @@ include("./connection.php");
 $query = $conn->prepare("SELECT filePath FROM Photos;"); // SQL to get all files from photos database
 $query->execute(); // executes query
 $result = $query->get_result(); // creates an object of results
-/var_dump($result); 
+//var_dump($result); 
 $user = mysqli_fetch_all($result, MYSQLI_ASSOC); // makes results appear as array
-/var_dump($user);
+//var_dump($user);
 ?>
 <section class="gallery_page"> 
 <h1>Gallery</h1>
@@ -16,7 +16,7 @@ $user = mysqli_fetch_all($result, MYSQLI_ASSOC); // makes results appear as arra
 <?php
 // takes each element of the user array
 foreach ($user as $img) {
-    /var_dump($img);
+    //var_dump($img);
     $size = getimagesize($img["filePath"]); // gets width and height of the photo
     // if width is more than height, it assigns horizontal class
     // otherwise image has vertical class
