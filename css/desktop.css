@@ -162,11 +162,16 @@
       transform: translateX(0); /* Moves element to normal position */
     }
   }
+
+  /* Gallery page page layout set*/
+
+  /* Horizontal image will take up half of the images row*/
   .horizontal {
-    width: 48%;
+    width: 48%; /* Sets image width */
     object-fit: cover; /* Makes all images fit in the same width */
   }
   
+  /* Vertical image will show 4 in one row */
   .vertical {
     width: 23%; /* Sets image width */
     object-fit: cover; /* Makes all images fit in the same width */

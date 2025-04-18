@@ -384,6 +384,11 @@ hgroup {
   margin: 0.6em; /* Adds spacing */
 }
 
+/* Style for gallery page 
+- Uses flexbox to arrange content in a row and wrap if not enough space.
+- content is aligned at the center of the page
+- sets gap between images
+*/
 .gallery {
   display: flex;
   flex-direction: row;
@@ -394,11 +399,13 @@ hgroup {
   padding: 2em;
 }
 
+/* For horizontal images width is the size of the screen */
 .horizontal {
-  width: 100%;
+  width: 100%; /* Sets image width */
   object-fit: cover; /* Makes all images fit in the same width */
 }
 
+/* For horizontal images width is half the size of the screen, showing 2 images in one row */
 .vertical {
   width: 48%; /* Sets image width */
   object-fit: cover; /* Makes all images fit in the same width */

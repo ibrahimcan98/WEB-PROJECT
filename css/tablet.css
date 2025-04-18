@@ -39,6 +39,8 @@
     grid-template-columns: repeat(2, 1fr); /* tablet */
   }
 
+  /* Gallery page page layout set*/
+  /* Vertical image will show 3 in one row */
   .vertical {
     width: 32%; /* Sets image width */
     object-fit: cover; /* Makes all images fit in the same width */
