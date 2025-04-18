@@ -10,6 +10,8 @@ $result = $query->get_result();
 $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
 //var_dump($user);
 ?>
+<section class="gallery_page">
+<h1>Gallery</h1>
 <figure class="gallery">
 <?php
 // trouble with horizontal images
@@ -25,6 +27,7 @@ foreach ($user as $img) {
 }
 ?>
 </figure>
+</section>
 <?php
 include("./footer.php");
 ?>
