@@ -38,4 +38,9 @@
   .process-grid {
     grid-template-columns: repeat(2, 1fr); /* tablet */
   }
+
+  .vertical {
+    width: 32%; /* Sets image width */
+    object-fit: cover; /* Makes all images fit in the same width */
+  }
 }

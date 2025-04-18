@@ -374,3 +374,33 @@ hgroup {
   color: #e5989b; /* Changes text color to light pink on hover */
   border: 1px solid #3b3030; /* Adds a dark brown border on hover */
 }
+
+.gallery_page h1 {
+  color: #e5989b; /* Sets text color to pink */
+  text-align: center; /* Centers the heading */
+  font-size: 2.6em; /* Increases font size */
+  text-shadow: 2px 2px black; /* Adds black text shadow */
+  letter-spacing: 0.4em; /* Increases space between letters */
+  margin: 0.6em; /* Adds spacing */
+  width: 100%;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-basis: auto;
+  justify-content: center;
+  gap: 10px;
+  padding: 2em;
+}
+
+.horizontal {
+  width: 100%;
+  object-fit: cover; /* Makes all images fit in the same width */
+}
+
+.vertical {
+  width: 48%; /* Sets image width */
+  object-fit: cover; /* Makes all images fit in the same width */
+}

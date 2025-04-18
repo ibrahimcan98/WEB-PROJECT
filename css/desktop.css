@@ -162,4 +162,13 @@
       transform: translateX(0); /* Moves element to normal position */
     }
   }
+  .horizontal {
+    width: 48%;
+    object-fit: cover; /* Makes all images fit in the same width */
+  }
+  
+  .vertical {
+    width: 23%; /* Sets image width */
+    object-fit: cover; /* Makes all images fit in the same width */
+  }
 }
