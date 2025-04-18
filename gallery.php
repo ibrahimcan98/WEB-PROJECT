@@ -1,5 +1,5 @@
 <?php
-$page_title = "Login";
+$page_title = "Gallery";
 include("./nav.php");
 ?>
 
