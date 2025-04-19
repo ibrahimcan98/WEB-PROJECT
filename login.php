@@ -1,92 +1,82 @@
 <?php
-// Set the title of the page
-$page_title = "Login";
-
-// Include the database connection and the navigation bar
-include("./connection.php");
+session_start();
+$page_title = "Account";
 include("./nav.php");
-//var_dump($_POST);
-// Check if the form was submitted by checking if "login" button was clicked
-if (isset($_POST['submit'])){
-    // Get the email and password entered by the user
-    $email    = $_POST['email'];
-    $password = $_POST['password'];
+include("./connection.php");
 
-    // Prepare a SQL query to find a user with the entered email
-    $stmt = $conn->prepare("SELECT UserID, Username, Email, Passcode FROM Users WHERE Email = ?");
-    $stmt->bind_param("s", $email); // Bind the email to the query
-    $stmt->execute(); // Run the query
-    // Get the result of the query
-    $result = $stmt->get_result();
-    //var_dump($result);
-    $user = $result->fetch_assoc();
-    //var_dump($user);
-    // If a user was found with that email
-    if ($result) {
-        // Check if the entered password is correct (match with the hashed password)
-        if ($user && password_verify($password, $user['Passcode'])) {
-            // If correct, save user info to session variables
-            $_SESSION['UserID'] = $user['UserID'];
-            $_SESSION['Username'] = $user['Username'];
-            $_SESSION['Email'] = $user['Email'];
-            // Redirect the user to the account page
-            header("Location: account.php");
-        } else {
-            // If password is wrong, show error message
-            echo "Incorrect password.";
+// Kullanıcı girişi kontrolü
+if (!isset($_SESSION['Username']) || !isset($_SESSION['UserID'])) {
+    header("Location: login.php");
+    exit();
+}
+
+// Silme veya düzenleme işlemi
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['selected_booking']) && isset($_POST['action'])) {
+    $action = $_POST['action'];
+    $selectedBookings = $_POST['selected_booking']; // checkbox ile birden fazla gelebilir (array)
+
+    if ($action === "delete") {
+        foreach ($selectedBookings as $bookingID) {
+            $deleteQuery = $conn->prepare("DELETE FROM Booking WHERE BookingID = ? AND UserID = ?");
+            $deleteQuery->bind_param("ii", $bookingID, $_SESSION['UserID']);
+            $deleteQuery->execute();
+            $deleteQuery->close();
         }
-    } else {
-      //var_dump($_SESSION);
-        // If no user found with that email, show error message
-        echo "No user found with that email.";
+        echo "<p style='color:green; text-align:center;'>Selected booking(s) deleted successfully.</p>";
+    } elseif ($action === "edit") {
+        if (count($selectedBookings) == 1) {
+            $bookingID = $selectedBookings[0];
+            header("Location: booking.php?edit_id=$bookingID#bookingForm"); // Form kısmına yönlendirme
+            exit();
+        } else {
+            echo "<p style='color:red; text-align:center;'>Please select only one booking to edit.</p>";
+        }
     }
-} 
-else 
+}
 ?>
-    <!-- MAIN SECTION -->
-    <main id="login_container">
-      <section class="auth_container login_auth">
-        <form action="login.php" method="POST">
-          <h1>Login</h1>
-          <!-- input fields -->
-          <ul>
-            <li class="input-place">
-              <input type="email" placeholder="Email" name="email" required />
-              <i class="fa-solid fa-envelope"></i>
-            </li>
-            <li class="input-place">
-              <input
-                type="password"
-                placeholder="Password"
-                name="password"
-                required
-              />
-              <i class="fa-solid fa-lock"></i>
-            </li>
-            <li>
-              <a href="#">Forgot your password?</a>
-            </li>
-          </ul>
-          
-          <button type="submit" name="submit">Login</button>
-        </form>
 
-        <!-- Alternative log in with social media accounts (Google, Facebook) -->
-        <h1>Login with Social Media</h1>
-        <section class="socialmedia">
-          <i class="fa-brands fa-google"></i>
-          <i class="fa-brands fa-facebook-f"></i>
-        </section>
-      </section>
+<!-- Main Content -->
+<main id="account">
+  <h1>Welcome, <?php echo htmlspecialchars($_SESSION['Username']); ?>!</h1>
 
-      <!-- Section leading to sign up page -->
-      <aside class="side_container login">
-        <h1>Hello , Welcome to Ivana's World!</h1>
-        <p>Don't have an account?</p>
-        <a href="signup.php"><button>Sing Up</button></a>
-      </aside>
-    </main>
+  <form method="POST" action="">
+    <section id="account_container">
+      <h2 class="account_h2">Your Bookings</h2>
 
-<?php
-include("./footer.php");
-?>
+      <?php
+      $dateBring = $conn->prepare("SELECT BookingID, DateOfShoot, TimeOfShoot, TypeOfShoot, Message, City FROM Booking WHERE UserID = ?");
+      $dateBring->bind_param("i", $_SESSION['UserID']);
+      $dateBring->execute();
+      $result = $dateBring->get_result();
+
+      if ($result && $result->num_rows > 0) {
+          while ($row = $result->fetch_assoc()) {
+              echo "<div class='booking-box'>";
+              echo "<label class='booking-label'>";
+              echo "<input type='checkbox' name='selected_booking[]' value='" . $row['BookingID'] . "'>";
+              echo "<div class='booking-info'>";
+              echo "<p><strong>Date:</strong> " . htmlspecialchars($row['DateOfShoot']) . "</p>";
+              echo "<p><strong>Time:</strong> " . htmlspecialchars($row['TimeOfShoot']) . "</p>";
+              echo "<p><strong>Type:</strong> " . htmlspecialchars($row['TypeOfShoot']) . "</p>";
+              echo "<p><strong>Message:</strong> " . htmlspecialchars($row['Message']) . "</p>";
+              echo "<p><strong>City:</strong> " . htmlspecialchars($row['City']) . "</p>";
+              echo "</div>";
+              echo "</label>";
+              echo "</div>";
+          }
+
+          echo "<div class='booking-actions'>";
+          echo "<button type='submit' name='action' value='edit' class='edit-btn'>Edit</button>";
+          echo "<button type='submit' name='action' value='delete' class='delete-btn'>Delete</button>";
+          echo "</div>";
+      } else {
+          echo "<p class='no-booking-message'>You have no bookings yet.</p>";
+      }
+
+      $dateBring->close();
+      ?>
+    </section>
+  </form>
+</main>
+
+<?php include("./footer.php"); ?>
