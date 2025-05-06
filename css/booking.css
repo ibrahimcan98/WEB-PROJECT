@@ -83,7 +83,7 @@
 }
 
 .booking_form button:hover {
-  background-color: #f5f5f5; /* Changes background to light gray on hover */
+  background-color: #f9f9f9; /* Changes background to light gray on hover */
   color: #e5989b; /* Changes text color to light pink on hover */
   border: 1px solid #3b3030; /* Adds a dark brown border on hover */
 }

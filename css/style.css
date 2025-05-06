@@ -177,7 +177,7 @@ Dark Button Styling
 .family_photo {
   width: 100%; /* Takes full width of the parent */
   padding: 1.2em 0 1.2em 0; /* Adds vertical padding */
-  background-color: #f5efff; /* Light purple background */
+  background-color: #f9f9f9; /* Light purple background */
   margin-bottom: 1em; /* Adds spacing below */
 }
 
@@ -305,7 +305,7 @@ hgroup {
 .book a {
   color: #3b3030; /* Sets text color to dark brown */
   padding: 1em 3em; /* Adds padding inside the button */
-  background-color: #f5efff; /* Sets background color to light purple */
+  background-color: #f9f9f9; /* Sets background color to light purple */
   border-radius: 2em; /* Rounds the button edges */
 }
 
@@ -325,7 +325,7 @@ hgroup {
   justify-content: center; /* Centers elements vertically */
   border-radius: 8px; /* Rounds the edges of the form */
   padding: 1rem; /* Adds space inside the form */
-  background: #f5f5f5; /* Sets background color to light gray */
+  background: #f9f9f9; /* Sets background color to light gray */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
 }
 
@@ -370,7 +370,7 @@ hgroup {
 }
 
 .contact_form button:hover {
-  background-color: #f5f5f5; /* Changes background to light gray on hover */
+  background-color: #f9f9f9; /* Changes background to light gray on hover */
   color: #e5989b; /* Changes text color to light pink on hover */
   border: 1px solid #3b3030; /* Adds a dark brown border on hover */
 }
